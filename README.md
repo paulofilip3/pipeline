@@ -1,6 +1,6 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/paulofilip3/pipeline.svg)](https://pkg.go.dev/github.com/paulofilip3/pipeline)
-![Build](https://github.com/paulofilip3/pipeline/actions/workflows/go.yml/badge.svg?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/paulofilip3/pipeline)](https://goreportcard.com/report/github.com/paulofilip3/pipeline)
+![Build](https://github.com/paulofilip3/pipeline/actions/workflows/go.yml/badge.svg?branch=main)
 
 pipeline
 ========
@@ -9,5 +9,7 @@ A minimal yet powerful framework for building [concurrent steaming data pipeline
 
 > Informally, a pipeline is a series of stages connected by channels, where each stage is a group of goroutines running the same function.
 
+## Documentation
+GoDoc is available [here.](https://godoc.org/github.com/paulofilip3/pipeline)
 
 [1]: https://go.dev/blog/pipelines
