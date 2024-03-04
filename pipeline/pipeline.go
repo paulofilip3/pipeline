@@ -72,7 +72,7 @@ func (p *Pipeline) AddStages(stages ...Stage) {
 func (p *Pipeline) AddChannels(ids ...ChannelId) {
 	for _, id := range ids {
 		if id <= 0 {
-			panic("workflow channels need to have an id bigger than 0")
+			panic("Workflow channels need to have an id bigger than 0")
 		}
 		p.Channels[id] = make(chan interface{})
 	}
@@ -83,7 +83,7 @@ func (p *Pipeline) AddChannels(ids ...ChannelId) {
 // new goroutine.
 func (p *Pipeline) Run(ctx context.Context) {
 	for name, stage := range p.Stages {
-		fmt.Printf("launching %s\n", name)
+		fmt.Printf("Launching %s\n", name)
 		go p.runStage(ctx, stage)
 	}
 }
@@ -145,7 +145,7 @@ func (p *Pipeline) runStage(ctx context.Context, stage Stage) {
 		select {
 		// do we need to shut down?
 		case <-ctx.Done():
-			fmt.Printf("shutting down %sn", stage.Name)
+			fmt.Printf("Shutting down %s\n", stage.Name)
 			return
 		// if stageOut is not nil, we send data to the next Stage and advance
 		// the queue forward
