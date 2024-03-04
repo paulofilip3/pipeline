@@ -145,7 +145,7 @@ func (p *Pipeline) runStage(ctx context.Context, stage Stage) {
 		select {
 		// do we need to shut down?
 		case <-ctx.Done():
-			fmt.Printf("shutting down %sn", stage.Name)
+			fmt.Printf("shutting down %s\n", stage.Name)
 			return
 		// if stageOut is not nil, we send data to the next Stage and advance
 		// the queue forward
